@@ -5,7 +5,7 @@
     "manifest_version" : 2,
     "minimum_chrome_version": "34",
     "description" : "This WebRTC screen capturing extension can be used within any WebRTC library/application! Use getScreenId.js!",
-    "homepage_url": "https://127.0.0.1:9088/",
+    "homepage_url": "https://127.0.0.1:9009/Canvas-Recording/record-canvas-drawings.html",
     "background": {
         "scripts": ["background-script.js"],
         "persistent": false
