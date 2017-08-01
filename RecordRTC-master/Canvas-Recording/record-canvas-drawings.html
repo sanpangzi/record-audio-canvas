@@ -845,6 +845,12 @@
        // document.body.innerHTML = '<h1 style="font-size:30px;text-align:center;margin:15px;color:red;font-weight:normal;">Please check page title for the encoding progress.<br><br>Frames are being encoded to generate a HD smooth WebM!<br><br><small>Please never click "kill" button; otherwise the entire encoding process will be crashed.</small></h1>';
        setTimeout(function() {
             recorder.stopRecording(function() {
+
+                //save .webm file
+                var timestamp = (new Date()).valueOf();
+                fileName=timestamp + '.webm';
+                invokeSaveAsDialog(this.getBlob(), fileName);
+                
                 var blob = recorder.getBlob();
                 var video = document.createElement('video');
                 video.src = URL.createObjectURL(blob);
